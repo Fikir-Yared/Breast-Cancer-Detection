@@ -1,0 +1,156 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+  body {
+    background:url(../image/bg1.jpg) ;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: sans-serif;
+    
+}
+.logo {
+    width: 160px;
+    height: 60px;
+
+}
+.vr_line {
+    width: 3px;
+    height:50px;
+  
+}
+.register {
+    background:linear-gradient(to right, #28b086,#058a47);
+    border: none;
+    border-radius: 10px;
+    width: 120px;
+    height: 50px;
+
+}
+
+#topmenu{
+    text-align: center;
+    color:#dad4d4;
+    background-color:   transparent;
+    font-size: 18px;
+    text-decoration:none;
+    border: transparent;
+    width: fit-content;
+    border-radius: 40px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: 3px 3px;
+    
+}
+#topmenu:hover{
+
+    color:#63d382;
+    text-decoration: none;
+    border-width:fit-content ;
+    
+}
+#tmenu{
+    margin-left: 200px;
+}
+h6{
+    margin-left: 80px;
+    color: #1e6e45;
+}
+.moto_position{
+    margin-top: 100px;
+    margin-left: 120px;
+
+}
+.moto{
+    font-family: Playwrite+DE+Grund;
+    color: white;
+    font-size: 50px;
+}
+.span{
+    font-size: 70px;
+    color: #63d382;
+}
+/* slide show */
+
+.slider-container{
+    width: 200px;
+    height: 80px;
+    margin-left: 250px;
+    margin-top: 100px;
+    padding-top: 20px;
+    padding-bottom: 140px;
+    background-image: url('Images/bg-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slider-images{
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+  .slider-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  .slider-img{
+    width: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: 0.7s ease;
+  }
+ 
+  .slider-images .slider-img:nth-child(1), .slider-images .slider-img:nth-child(5){
+    height: 130px;
+  }
+  .slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(4){
+    height: 170px;
+  }
+  .active{
+    width: 210px !important;
+    height: 200px !important;
+  }
+ 
+    /* responsive */
+@media (max-width: 991px){
+    .sidebar{
+        background-color: rgba(68, 57, 57, 0);
+        backdrop-filter:blur(10px);
+    }
+    .logo{
+        margin-top: 0px;
+        margin-left: 10px;
+    }
+   .moto_position{
+    max-width: 350px;
+    max-height: 300px;
+   }
+   .moto{
+    font-size: 40px;
+   }
+   .span{
+    font-size: 50px;
+   }
+   h6{
+    margin-left: 50px;
+   }
+   #tmenu{
+    margin-left: 0px;
+
+}
+    .vr_line{
+        display: none;
+    }
+  
+
+}

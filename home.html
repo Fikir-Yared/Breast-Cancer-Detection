@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="js/bootstrap.bundle.min.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@_7.1.0/dist/ionicons/ionicons.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <title>Breast Cancer Detection</title>
+</head>
+<body>
+  <div class="vh-100 overflow-hidder">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+                <!-- logo -->
+            <a class="navbar-brand fs-3" href="#"><img class="logo" src="image/logo.png" ></a>
+                <!-- Toggle Btn -->
+            <button class="navbar-toggler shadow-none border-0 " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- sideBar -->
+            <div class="sidebar offcanvas offcanvas-start  " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            
+                <!-- sideBar Header -->
+                <div class="offcanvas-header text-white border-bottom">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><a class="navbar-brand fs-3" href="#"><img class="logo" src="image/logo.png" ></a></h5>
+                <button type="button" class="btn-close btn-close-white shadow shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <!-- sidebar body -->
+                <div class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0" >
+                    <ul class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3" id="tmenu">
+                        <li class="nav-item mx-2">
+                        <a id="topmenu"  aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                        <a id="topmenu"   href="About.html">About US</a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a id="topmenu"  href="service.html">Service</a>
+                        </li>
+                        <li class="nav-item mx-2"> 
+                            <a id="topmenu"  href="#">Contact Us</a>
+                        </li>
+                        <img class="vr_line" src="image/vr.png" alt="" srcset="">
+                    </ul>
+                    
+                    <!-- login/ sigh up -->
+                    <div class="d-flex flex-column flex-lg-row p-4 justify-content-center align-items-center gap-3 ">
+                        <a href="#" id="topmenu" class="text-white"> Log In</a>
+                        <button class="register"><a href="#" id="topmenu" class="text-white"> Register</a></button>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="moto_position">
+      <h6>THE ULTIMATE SATISFACTION</h6>
+      <h1 class="moto">
+        Early <span class="span">Detection </span>, <br> Lifelong Protection!
+      </h1>
+    </div>
+
+    <!-- slide show -->
+    <section class="slider-container">
+      <div class="slider-images">
+        
+        <div class="slider-img">
+          <img src="image/image4.jpeg" alt="1" />
+          
+        </div>
+        <div class="slider-img">
+          <img src="image/image1.jpg" alt="2" />
+          
+        </div>
+        <div class="slider-img active">
+          <img src="image/image2.jpg" alt="3" />
+          
+        </div>
+        <div class="slider-img">
+          <img src="image/image3.jpg" alt="4" />
+          
+        </div>
+        <div class="slider-img">
+          <img src="image/image5.jpg" alt="5" />
+        </div>
+        
+      </div>
+    </section>
+    
+  </div>
+  <script src="js/jQruery.js"></script>
+  <script>
+    jQuery(document).ready(function ($) {
+      $(".slider-img").on("click", function () {
+        $(".slider-img").removeClass("active");
+        $(this).addClass("active");
+      });
+    });
+  </script>
+</body>
+</html>
