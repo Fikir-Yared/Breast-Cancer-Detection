@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/css/contact.css" />
+    <link rel="stylesheet" href="static/css/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="static/css/footer.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playwrite+DE+Grund:wght@100..400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="static/js/bootstrap.bundle.min.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@_7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <title>Breast Cancer Detection</title>
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="vh-100 overflow-hidder">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container">
+          <!-- logo -->
+          <a class="navbar-brand fs-3" href="#"
+            ><img class="logo" src="static/image/logo.png"
+          /></a>
+          <!-- Toggle Btn -->
+          <button
+            class="navbar-toggler shadow-none border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- sideBar -->
+          <div
+            class="sidebar offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <!-- sideBar Header -->
+            <div class="offcanvas-header text-white border-bottom">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <a class="navbar-brand fs-3" href="#"
+                  ><img class="logo" src="static/image/logo.png"
+                /></a>
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white shadow shadow-none"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <!-- sidebar body -->
+            <div
+              class="offcanvas-body d-flex flex-column flex-lg-row p-4 p-lg-0"
+            >
+              <ul
+                class="navbar-nav justify-content-center align-items-center fs-5 flex-grow-1 pe-3"
+                id="tmenu"
+              >
+                <li class="nav-item mx-2">
+                  <a id="topmenu" aria-current="page" href="home">Home</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a id="topmenu" href="about">About US</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a id="topmenu" href="service">Service</a>
+                </li>
+                <li class="nav-item mx-2">
+                  <a id="topmenu" href="#">Contact Us</a>
+                </li>
+                <img class="vr_line" src="static/image/vr.png" alt="" srcset="" />
+              </ul>
+
+              <!-- login/ sigh up -->
+              <div
+                class="d-flex flex-column flex-lg-row p-4 justify-content-center align-items-center gap-3"
+              >
+                <a href="login" id="topmenu" class="text-white"> Log In</a>
+                <button class="register">
+                  <a href="register" id="topmenu" class="text-white"> Register</a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="container5">
+        <div class="main">
+          <h1>Login</h1>
+          <h3>Enter your credentials</h3>
+          <form action="#" method="post">
+            <label for="username"> Username: </label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your Username"
+              required
+            />
+
+            <label for="password"> Password: </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your Password"
+              required
+            />
+
+            <div class="wrap">
+              <button type="submit" onclick="solve()">Submit</button>
+            </div>
+          </form>
+          {%if error != "" %}
+          <div class="bg-warning white"><p>{{error}}</p></div>
+          {%endif%}
+          <p>
+            Not registered?
+            <a href="#" style="text-decoration: none"> Create an account </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-col">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Service</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Our Service</h4>
+            <ul>
+              <li><a href="#">Breast Cancer Prediction</a></li>
+              <li><a href="#">Detection</a></li>
+              <li><a href="#">Treatment</a></li>
+              <li><a href="#">Councile</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact</h4>
+            <div class="sec">
+              <img src="static/image/location.png" alt="" />
+              <p><span>East Shoa, Adama</span> <br />Ethiopia</p>
+            </div>
+            <div class="sec">
+              <img src="static/image/phone.png" alt="" />
+              <p><span>Call Us</span><br />+251-2222-222</p>
+            </div>
+            <div class="sec">
+              <img src="static/image/phone.png" alt="" />
+              <p><span>Mail Us</span><br />info@gmail.com</p>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>follow us</h4>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="static/js/java.js"></script>
+  </body>
+</html>
