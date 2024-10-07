@@ -135,7 +135,7 @@ def service():
             return render_template("service.html", name = f.filename,result=result)  
           
     else:
-        return render_template("service.html",,result=result)
+        return render_template("service.html",result=result)
 
 
 @app.route("/about")
