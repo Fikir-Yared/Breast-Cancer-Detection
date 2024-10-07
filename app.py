@@ -111,11 +111,12 @@ def home():
 
 @app.route("/service",methods=["POST","GET"])
 def service():
+    result=['','']
     if request.method == 'POST':
         try:
             
             if request.form['submit_button'] == 'reset':
-                return render_template("service.html")
+                return render_template("service.html",result=result)
             
                
         except:
@@ -134,7 +135,7 @@ def service():
             return render_template("service.html", name = f.filename,result=result)  
           
     else:
-        return render_template("service.html")
+        return render_template("service.html",,result=result)
 
 
 @app.route("/about")
