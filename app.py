@@ -9,7 +9,7 @@ import numpy as np
 
 app = Flask(__name__)
 
-app.config['UPLOAD_FOLDER'] = '/opt/render/project/src/static/uploaded image'
+app.config['UPLOAD_FOLDER'] = 'static/uploaded image'
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///db.sqlite"
 app.config["SECRET_KEY"] = "abc"
 db = SQLAlchemy()
